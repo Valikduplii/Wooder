@@ -13,16 +13,47 @@ $(function () {
       $('.header__menu').toggleClass('active');
       $('body').toggleClass('active')
    })
-   $('.header__close').click(function (event){
-      $('.header__menu').toggleClass('active');
-   })
+
+
+
    /*
 
    $(this).not('.header__close').click(function (event){
       $('.header__menu').toggleClass('active');
-   })
+   }) 
    */
-  
+
+  var join = $('.join-space'),
+  joinLink = $('.join span'),
+  indexClick = 0;
+$ ( function() {
+joinLink.click( function(event) {
+  if (indexClick === 0) {
+      join.animate({ "left": "0px" }, "slow" );
+      join.addClass('active')
+      indexClick = 1;
+  }
+  else {
+      join.animate({ "left": "-100%" }, "slow" );
+      indexClick = 0;
+  }
+  event.stopPropagation();
+});
+});
+$(document).click(function(event) {
+if ($(event.target).closest(".join-space").length) return;
+join.animate({ "left": "-100%" }, "slow" );
+      indexClick = 0;
+
+event.stopPropagation();
+});
+$('.header__close').click(function (event){
+   join.animate({ "left": "-100%" }, "slow" );
+})
+
+
+
+
    openClose();
    function open(){
       $('.icon').click(function (event) {
@@ -44,4 +75,5 @@ $(function () {
          
       }
    })
+   
 })

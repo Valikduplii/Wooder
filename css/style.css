@@ -111,7 +111,8 @@ h6 {
    width: 300px;
    height: 100%;
    background-color: rgba(204, 153, 102, 0.75);
-
+   width: 300px;
+   height: 100%;
    left: -100%;
 }
 body.active{
@@ -120,21 +121,76 @@ body.active{
    overflow: auto;
    z-index: 100;
 }
+
+.join {
+	float: left;
+	margin: 0px 0px 18px 0px;
+	position: relative;
+}
+.join span {
+	display: block;
+   font-size: 15px;
+   font-family: 'ProximaNovaBold';
+   color: rgb(102, 102, 102);
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.join span:hover {
+
+}
+
+.join-space {
+	position: fixed;
+	width: 250px;
+	height: 110vh;
+	background: rgba(204, 153, 102, 0.8);
+	top: 0px;
+	left: -100%;
+	z-index: 999;
+	display: block;
+}
+.join-space ul{
+
+
+}
+.join-space ul li{
+   margin: 20px 0px;
+}
+.join-space ul li:first-child{
+   margin: 70px 0px 0px 0px;
+}
+.join-space ul li a{
+   color: #fff;
+   font-family: "ProximaNovaBold";
+   font-size: 23px;
+}
+.join-space ul li a:hover{
+   color: #fff;
+   opacity: 0.8;
+}
 .header__menu.active{
    left: 0%;
 }
+
 .header__list{
 
 
 }
 .header__close{
    position: absolute;
+   width: 15px;
+   height: 15px;
    z-index: 5;
    top: 1%;
    left: 3%;
 }
-.header__close{
-
+.header__close:active{
+   transform: rotate(360deg);
+   transition: all 0.5s ease 0s;
 }
 .header__menu ul{
    margin-left: 20px;
@@ -305,7 +361,7 @@ body > header > div > div.lang > ul > li > a {
 .header__body nav ul li a:hover{
    opacity: 0.8;
 }
-.burger__text:hover{
+.burger__text:hover span{
    opacity: 0.8;
 }
 div.menu > ul > li:hover .sub-menu__list {
@@ -399,7 +455,7 @@ body > header > div > div.menu > ul > li:hover .arrow {
    font-size: 305px;
    position: absolute;
    top: calc(70vh - 40%);
-   z-index: 50;
+   z-index: 3;
 }
 .header__left {
 }
@@ -410,6 +466,8 @@ body > header > div > div.menu > ul > li:hover .arrow {
 .block__flex {
    width: 100%;
 }
+
+
 .header__title {
    font-size: 100px;
    text-transform: uppercase;
@@ -488,6 +546,18 @@ body > header > div > div.menu > ul > li:hover .arrow {
 }
 .social__media.close2{
    display: none;
+}
+.about__learn a{
+   width: 100px;
+   height:10px;
+}
+.about__learn a:hover{
+   color: rgba(0, 0, 0, 0.7);
+
+
+}
+.aboutUs__learn a:hover{
+   color: rgba(0, 0, 0, 0.7);
 }
 .media_t{
 
@@ -568,6 +638,7 @@ body > header > div > div.menu > ul > li:hover .arrow {
    bottom: -4px;
    transform: rotate(45deg);
 }
+
 .header__squar {
    position: relative;
    display: block;
@@ -800,6 +871,11 @@ body > header > div > div.menu > ul > li:hover .arrow {
    width: 47px;
    height: 3px;
 }
+.learn_2 p{
+   width: 100px;
+   position: relative;
+   right: -57%;
+}
 .about__number {
    font-family: "ProximaNovaBold";
    font-size: 36px;
@@ -1018,6 +1094,7 @@ body > header > div > div.menu > ul > li:hover .arrow {
    background-repeat: no-repeat;
 }
 .item_quality:hover {
+   transition: all 1s ease 0s;
    background-image: url("../image/items/trialblack.png");
 }
 .item_quality img {
@@ -1112,13 +1189,14 @@ body > header > div > div.menu > ul > li:hover .arrow {
    height: 55px;
    border: 1.5px solid #fff;
    color: #fff;
-   padding: 19.5px 30px 18px 0px;
+   padding: 15.5px 30px 18px 0px;
    font-size: 14px;
    text-align: center;
    text-transform: uppercase;
    font-family: "ProximaNovaBold";
    align-items: center;
    letter-spacing: 1.3px;
+   display: flex;
 }
 .header__buttomm a {
    color: #fff;
@@ -1127,6 +1205,30 @@ body > header > div > div.menu > ul > li:hover .arrow {
    position: relative;
    bottom: 5px;
    right: 15px;
+}
+.block__link1{
+   background-image: url('../image/player/playerIcon.png');
+   background-repeat: no-repeat;
+   transition: all 1s ease 0s;
+   padding: 0px 30px 25px 0px;
+   margin: 0px 10px 0px 60px;
+   align-items: center;
+   justify-content: center;
+}
+.block__link1:hover{
+
+}
+.header__buttomm:hover{
+   background-color: #fff;
+   transition: all 0.5s ease 0s;
+}
+.header__buttomm:hover {
+   color: rgba(0, 0, 0, 1);
+   transition: all 0.5s ease 0s;
+}
+.header__buttomm:hover .block__link1{
+   background-image: url('../image/player/playeritemblack.png');
+   transition: all 0.5s ease 0s;
 }
 .container__1560:before {
    content: "";
@@ -1245,11 +1347,13 @@ footer {
    display: flex;
    width: 100%;
    position: relative;
-   padding: 0px 20px;
+   padding: 0px 40px;
+   padding-top: 25px;
    margin: 25px 0px;
 }
 .footer_2016 {
    flex: 1 1 33.333%;
+
 }
 .footer__logo {
    flex: 1 1 33.333%;
@@ -1258,6 +1362,7 @@ footer {
 .footer__design {
    white-space: nowrap;
    display: flex;
+
 }
 .design__grey {
    margin-left: 5px;
