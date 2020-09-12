@@ -68,7 +68,12 @@ $('.header__close').click(function (event){
          open();
       }
    }
-
+      $($('main') || $('.about')).not('.social__media').click(function (event) {
+      if ($('.social__media').hasClass('active')){
+         $('.social__media').removeClass('active');
+      } else {
+         
+      }
    })
    
 })
