@@ -576,6 +576,7 @@ body > header > div > div.menu > ul > li:hover .arrow {
    bottom: 25px;
    right: 0%;
 }
+/*
 .scroll:after {
    transform: rotate(-50deg);
    left: 8.5px;
@@ -596,6 +597,7 @@ body > header > div > div.menu > ul > li:hover .arrow {
    left: -100%;
    bottom: 7px;
 }
+*/
 .header__buttom {
    width: 305px;
    height: 55px;
