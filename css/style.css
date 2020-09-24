@@ -578,12 +578,12 @@ body > header > div > div.menu > ul > li:hover .arrow {
 }
 .scroll:after {
    transform: rotate(-50deg);
-   left: 7.5px;
-   top: 16.5px;
+   left: 8.5px;
+   top: 16.4px;
 }
 .scroll:before {
    left: 1px;
-   top: 58.5px;
+   top: 58px;
    transform: rotate(50deg);
 }
 .scroll__squar {
