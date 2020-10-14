@@ -1350,6 +1350,9 @@ footer {
    color: rgba(125, 125, 125, 0.9);
 }
 @media(max-width: 768px) {
+   .arroow__down {
+      display: none;
+   }
    .join-space ul li:nth-child(4){
       display: block;
    }
@@ -1531,5 +1534,10 @@ footer {
    .container__headermain {
       max-width: 300px;
       padding: 0px;
+   }
+}
+@media(max-height: 300px) {
+   .header__center__main {
+      padding-top: 100px;
    }
 }
